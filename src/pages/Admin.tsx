@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { PRODUCTS, ORDERS, QUOTATIONS } from '../data'
+import logo from '../assets/image/LOGO.png'
 
 const NAVY = '#082E61'
 const BLUE = '#0099FF'
@@ -317,14 +318,14 @@ export default function Admin() {
       {/* Logo */}
       <div className="px-5 py-5" style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
         <div className="h-[2px] mb-4" style={{ background: `linear-gradient(90deg, ${GOLD} 0%, transparent 100%)` }} />
-        <div className="flex items-center gap-2.5">
-          <div className="relative flex items-center justify-center w-8 h-8 shrink-0" style={{ background: NAVY }}>
-            <span className="font-display font-800 text-white text-[11px] tracking-widest leading-none">NB</span>
-            <div className="absolute bottom-0 left-0 right-0 h-[2px]" style={{ background: GOLD }} />
-          </div>
-          <div>
-            <div className="font-display font-800 text-[13px] tracking-wide uppercase text-white leading-none">NB LAO</div>
-            <div className="font-ui text-[8px] tracking-[0.2em] uppercase mt-0.5" style={{ color: 'rgba(255,255,255,0.3)' }}>Admin Portal</div>
+        <div className="flex flex-col items-start gap-2">
+          <img
+            src={logo}
+            alt="NB Lao Sole Co., Ltd."
+            className="block w-auto h-10 max-w-[170px] object-contain"
+          />
+          <div className="font-ui text-[8px] tracking-[0.2em] uppercase" style={{ color: 'rgba(255,255,255,0.3)' }}>
+            Admin Portal
           </div>
         </div>
       </div>
