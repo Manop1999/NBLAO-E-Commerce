@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../auth'
 import { useToast } from '../components/Toast'
+import logo from '../assets/image/LOGO.png'
 
 const DARK = '#070f1e'
 const NAVY = '#082E61'
@@ -43,9 +44,12 @@ export default function AdminLogin() {
     <div style={{ background: DARK, minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '24px' }}>
       <div className="w-full max-w-[380px]">
         <div className="text-center mb-8">
-          <div className="relative inline-flex items-center justify-center w-12 h-12 mb-4" style={{ background: NAVY, border: '1px solid rgba(255,255,255,0.1)' }}>
-            <span className="font-display font-800 text-white text-[14px] tracking-widest">NB</span>
-            <div className="absolute bottom-0 left-0 right-0 h-[2px]" style={{ background: GOLD }} />
+          <div className="flex items-center justify-center h-12 mb-4">
+            <img
+              src={logo}
+              alt="NB Lao Sole Co., Ltd."
+              className="block h-12 w-auto max-w-[220px] object-contain"
+            />
           </div>
           <div className="flex items-center justify-center gap-3 mb-3">
             <div className="h-px w-8" style={{ background: GOLD, opacity: 0.3 }} />

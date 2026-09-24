@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '../auth'
 import { useToast } from '../components/Toast'
 import { useT } from '../i18n'
+import logo from '../assets/image/LOGO.png'
 
 const NAVY = '#082E61'
 const BLUE = '#0099FF'
@@ -49,12 +50,12 @@ export default function Login() {
       {/* Top bar */}
       <div style={{ background: NAVY, padding: '10px 0' }}>
         <div className="max-w-[1440px] mx-auto px-6 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2.5 no-underline">
-            <div className="relative flex items-center justify-center w-8 h-8" style={{ background: NAVY, border: '1px solid rgba(255,255,255,0.1)' }}>
-              <span className="font-display font-800 text-white text-[11px] tracking-widest">NB</span>
-              <div className="absolute bottom-0 left-0 right-0 h-[2px]" style={{ background: GOLD }} />
-            </div>
-            <span className="font-display font-800 text-[15px] tracking-[0.1em] uppercase text-white">NB LAO</span>
+          <Link to="/" className="flex items-center no-underline">
+            <img
+              src={logo}
+              alt="NB Lao Sole Co., Ltd."
+              className="block h-8 w-auto max-w-[180px] object-contain"
+            />
           </Link>
           <Link to="/register" className="font-ui text-[12px] no-underline" style={{ color: 'rgba(255,255,255,0.55)' }}>
             Create account
